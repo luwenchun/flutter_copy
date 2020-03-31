@@ -76,8 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.school), title: Text('热映')),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.panorama_fish_eye), title: Text('找片')),
+          BottomNavigationBarItem(icon: Icon(Icons.panorama_fish_eye), title: Text('找片')),
           BottomNavigationBarItem(icon: Icon(Icons.people), title: Text('我的'))
         ], //BottomNavigationBarItem 的 icon 用的是 Icon Widget实现的，这里是随便找的图标，先实现功能，后续在改成和 豆瓣电影 的一样
         currentIndex: _selectedIndex, //默认选中的 index

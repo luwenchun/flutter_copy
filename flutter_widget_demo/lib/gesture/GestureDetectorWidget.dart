@@ -14,7 +14,7 @@ class GestureDetectorWidget extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: Text("Flutter 手势识别Widget")),
         body: GestureDetector(
-          child: Text('手势识别'),
+          child: Text('手势识别 111111111111111'),
           onTap: (){
             print('点击');
           },

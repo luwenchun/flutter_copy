@@ -13,6 +13,7 @@ class TextWidget extends StatelessWidget {
       home: Scaffold(
           appBar: AppBar(title: Text("Flutter UI基础Widget -- 文本")),
           body: Text("Hello Flutter",
+          // textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.blue,
                   fontSize: 20.0,

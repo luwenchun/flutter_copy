@@ -40,7 +40,7 @@ class HotWidgetState extends State<HotWidget> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    print('HotWidgetState build');
+    print('HotWidgetState111 build');
     if (curCity != null && curCity.isNotEmpty) {//如果 curCity 不为空
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -68,8 +68,7 @@ class HotWidgetState extends State<HotWidget> {
                     style: TextStyle(fontSize: 16),
                     decoration: InputDecoration(
                         hintText: '\uE8b6 电影 / 电视剧 / 影人',
-                        hintStyle: TextStyle(
-                            fontFamily: 'MaterialIcons', fontSize: 16),
+                        hintStyle: TextStyle(fontFamily: 'MaterialIcons', fontSize: 16),
                         contentPadding: EdgeInsets.only(top: 8, bottom: 8),
                         border: OutlineInputBorder(
                           borderSide: BorderSide.none,
@@ -99,6 +98,7 @@ class HotWidgetState extends State<HotWidget> {
                     Expanded(
                       child: Container(
                         child: TabBarView(
+            
                           physics: ClampingScrollPhysics(),
                           children: <Widget>[
                             HotMoviesListWidget(curCity),

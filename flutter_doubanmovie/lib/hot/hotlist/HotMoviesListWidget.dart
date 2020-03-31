@@ -38,6 +38,7 @@ class HotMoviesListWidgetState extends State<HotMoviesListWidget> with Automatic
     //成功获取数据
     if (response.statusCode == 200) {
       var responseJson = json.decode(response.body);
+      // print(responseJson);
       for (dynamic data in responseJson['subjects']) {
         HotMovieData hotMovieData = HotMovieData.fromJson(data);
         serverDataList.add(hotMovieData);
@@ -51,6 +52,7 @@ class HotMoviesListWidgetState extends State<HotMoviesListWidget> with Automatic
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    print(hotMovies[1]);
     if (hotMovies == null || hotMovies.isEmpty) {
       return Center(
         child: CircularProgressIndicator(),

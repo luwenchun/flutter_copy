@@ -13,6 +13,7 @@ class CityWidgtState extends State<CitysWidget> {
 
   @override
   Widget build(BuildContext context) {
+    print(context);
     // TODO: implement build
     curCity = ModalRoute.of(context).settings.arguments;
     List<String> hotCitys = [
@@ -69,7 +70,7 @@ class CityWidgtState extends State<CitysWidget> {
                         Container(
                           height: 50,
                           child: TextField(
-                            cursorColor: Colors.green,
+                            cursorColor: Colors.red,
                             decoration: InputDecoration(
                                 hintText: '输入城市名查询',
                                 hintStyle: TextStyle(fontSize: 14),
@@ -82,13 +83,15 @@ class CityWidgtState extends State<CitysWidget> {
                                 fillColor: Colors.white),
                           ),
                         ),
+                        // 定位
                         Padding(
                           padding: EdgeInsets.only(top: 10, left: 20),
                           child: Text(
-                            'GPS定位城市',
+                            'GPS定位城市111',
                             style: TextStyle(fontSize: 12, color: Colors.grey),
                           ),
                         ),
+                        // 定位城市
                         Padding(
                           padding: EdgeInsets.only(top: 5, left: 20),
                           child: MaterialButton(
@@ -110,30 +113,29 @@ class CityWidgtState extends State<CitysWidget> {
                             onPressed: () {},
                           ),
                         ),
+                        // 热门城市
                         Padding(
                           padding: EdgeInsets.only(top: 5, left: 20),
-                          child: Text('热门城市',
-                              style:
-                                  TextStyle(fontSize: 12, color: Colors.grey)),
+                          child: Text('热门城市',style:TextStyle(fontSize: 12, color: Colors.grey)),
                         ),
+                        // 热门城市btn
                         Expanded(
                           flex: 1,
                           child: Padding(
-                            padding:
-                                EdgeInsets.only(left: 20, right: 20, top: 10),
+                            padding:EdgeInsets.only(left: 20, right: 20, top: 10),
                             child: GridView.builder(
                               gridDelegate:
                                   SliverGridDelegateWithFixedCrossAxisCount(
-                                      crossAxisCount: 3,
-                                      childAspectRatio: 2.6,
-                                      mainAxisSpacing: 20,
-                                      crossAxisSpacing: 50),
+                                  crossAxisCount: 4,
+                                  childAspectRatio: 0.2,
+                                  mainAxisSpacing: 40,
+                                  crossAxisSpacing: 20),
                               itemCount: hotCitys.length,
                               itemBuilder: (context, index) {
                                 return MaterialButton(
                                   child: Text(hotCitys[index]),
                                   color: Colors.white,
-                                  elevation: 0,
+                                  elevation: 20,
                                   onPressed: () {
                                     Navigator.pop(context,hotCitys[index]);
                                   },

@@ -24,13 +24,15 @@ class HotMovieItemWidgetState extends State<HotMovieItemWidget> {
       height: 160,
       padding: EdgeInsets.all(20),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
           Image.network(
             widget.hotMovieData.images.small,
             width: 80,
             height: 120,
             fit: BoxFit.cover,
+            alignment:Alignment.topLeft,
+            repeat:ImageRepeat.repeatX
           ),
           Expanded(
             flex: 1,

@@ -14,13 +14,25 @@ class ShowAboutDialogWidget extends StatelessWidget {
           appBar: AppBar(title: Text("Flutter UI Widget -- 对话框")),
           body: Builder(
               builder: (context) => RaisedButton(
-                  onPressed: () {
-                    showAboutDialog(
-                        context: context,
-                        applicationName: 'Flutter UI Widget -- 对话框',
-                        applicationVersion: '1.0.0');
-                  },
-                  child: Text('RaisedButton')))),
+                onPressed: (){
+                  showAboutDialog(
+                    context: context,
+                    applicationName: 'Flutter UI Widget',
+                    applicationVersion: '1.0.0'
+                  );
+                },
+                child: Text('RaisedButton11'),
+              )
+          )
+      )
+              // builder: (context) => RaisedButton(
+              //     onPressed: () {
+              //       showAboutDialog(
+              //           context: context,
+              //           applicationName: 'Flutter UI Widget -- 对话框',
+              //           applicationVersion: '1.0.0');
+              //     },
+              //     child: Text('RaisedButton')))),
     );
   }
 }
